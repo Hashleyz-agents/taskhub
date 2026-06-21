@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TaskHub</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">▣</span> TaskHub
+    </div>
+
+    <div class="project-picker">
+      <select id="projectSelect" aria-label="Project"></select>
+      <button id="newProjectBtn" class="btn ghost" title="New project">+ Project</button>
+      <button id="newEpicBtn" class="btn">+ Epic</button>
+      <button id="newTaskBtn" class="btn primary">+ Task</button>
+    </div>
+
+    <div class="spacer"></div>
+
+    <input id="search" class="search" type="search" placeholder="Search tasks…" aria-label="Search tasks" />
+
+    <label class="epic-toggle" id="epicToggle" title="Show epic cards on the board">
+      <input type="checkbox" id="epicToggleInput" /> Show epics
+    </label>
+
+    <div class="viewtoggle" id="viewToggle" role="tablist">
+      <button data-view="board" class="active" role="tab">Board</button>
+      <button data-view="tree" role="tab">Tree</button>
+    </div>
+
+    <button id="deleteProjectBtn" class="btn danger-soft" title="Delete this project">Delete project</button>
+  </header>
+
+  <main id="main" class="main"></main>
+
+  <aside id="drawer" class="drawer" aria-hidden="true"></aside>
+  <div id="overlay" class="overlay hidden"></div>
+  <div id="modalRoot"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

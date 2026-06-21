@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+*.tmp
+
+# Editor / OS
+.DS_Store
+
+# Project data: only ship the "Demo Product" sample project.
+# Personal/other projects under data/ are kept private.
+data/*
+!data/demo-product/
